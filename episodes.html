@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>All Episodes | The More Smarter Show</title>
+<meta name="description" content="Every episode of The More Smarter Show: interviews with business owners, investors and entrepreneurs about working smarter, not harder.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="All Episodes | The More Smarter Show">
+<meta property="og:description" content="Every episode of The More Smarter Show: interviews with business owners, investors and entrepreneurs about working smarter, not harder.">
+<meta property="og:image" content="https://i.ytimg.com/vi/u6ELuo0IuNA/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="episodes">
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="The More Smarter Show home">
+      <span class="s">THE</span><span class="m">MORE</span><span class="g">SMARTER</span><span class="s">SHOW</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="episodes.html" data-page="episodes">Episodes</a>
+      <a href="hosts.html" data-page="hosts">Hosts</a>
+      <a href="guest.html" data-page="guest">Be a Guest</a>
+      <a href="ad-partners.html" data-page="ads">Ad Partners</a>
+      <a href="https://www.youtube.com/@TheMoreSmarterShow" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://open.spotify.com/show/1ER3J5veUX59H5ya2H1MA5" target="_blank" rel="noopener">Spotify</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">Watch or listen free</div>
+      <h1>Every Episode</h1>
+      <p>Search by guest, topic or business. Click any episode to watch it here.</p>
+    </div>
+    <div class="brush gold" aria-hidden="true"></div>
+    <div class="brush" aria-hidden="true"></div>
+  </section>
+
+  <section aria-label="Episode library">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="count" id="count" aria-live="polite"></div>
+        <div class="tools">
+          <label class="search" for="q">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg>
+            <span hidden>Search episodes</span>
+            <input id="q" type="search" placeholder="Try: house hacking, Bitcoin, AI" autocomplete="off">
+          </label>
+          <button class="chip" aria-pressed="true" data-f="all">All</button>
+          <button class="chip" aria-pressed="false" data-f="guest">Guest interviews</button>
+          <button class="chip" aria-pressed="false" data-f="duo">Dylan &amp; Jake</button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden>No episodes match that search. Try a guest's first name or a broader topic.</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="signoff">Like, share, subscribe to The More Smarter Show. <em>Only if you like it!</em></p>
+    <div class="ctas">
+      <a class="btn btn-gold" href="https://www.youtube.com/@TheMoreSmarterShow?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a>
+      <a class="btn btn-ghost" href="https://open.spotify.com/show/1ER3J5veUX59H5ya2H1MA5" target="_blank" rel="noopener">Spotify</a>
+    </div>
+    <small>&copy; <span id="yr"></span> The More Smarter Show</small>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="player" id="dlg-player"></div>
+  <div class="dlg-body">
+    <div class="dlg-top"><h3 id="dlg-title"></h3><button class="close" id="dlg-close" aria-label="Close">&times;</button></div>
+    <p id="dlg-desc"></p>
+    <div class="ctas">
+      <a class="btn btn-gold" id="dlg-yt" target="_blank" rel="noopener">Watch on YouTube</a>
+      <a class="btn btn-ghost" href="https://open.spotify.com/show/1ER3J5veUX59H5ya2H1MA5" target="_blank" rel="noopener">Listen on Spotify</a>
+    </div>
+  </div>
+</dialog>
+
+<script src="episodes.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
