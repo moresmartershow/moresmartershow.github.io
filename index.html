@@ -3,182 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The More Smarter Show | Podcast for Self-Employed People & Business Owners</title>
-<meta name="description" content="The More Smarter Show with Jake Handler and Dylan Onorevole: a podcast for self-employed people and business owners about working smarter, not harder. Real estate, entrepreneurship, systems and building a life on your own terms. Watch every episode free.">
+<title>The More Smarter Show | Podcast for Self-Employed People &amp; Business Owners</title>
+<meta name="description" content="The More Smarter Show with Dylan Onorevole and Jake Handler: a podcast for self-employed people and business owners about working smarter, not harder. Real estate, entrepreneurship, systems and building a life on your own terms.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="The More Smarter Show">
-<meta property="og:description" content="Working smarter, not harder. A podcast for self-employed people and business owners, hosted by Jake Handler and Dylan Onorevole.">
+<meta property="og:title" content="The More Smarter Show | Podcast for Self-Employed People &amp; Business Owners">
+<meta property="og:description" content="The More Smarter Show with Dylan Onorevole and Jake Handler: a podcast for self-employed people and business owners about working smarter, not harder. Real estate, entrepreneurship, systems and building a life on your own terms.">
 <meta property="og:image" content="https://i.ytimg.com/vi/u6ELuo0IuNA/maxresdefault.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  /* Layout: navy masthead with the latest episode, then a searchable library of every episode, hosts, and a sign-off. */
-  :root {
-    --navy: #13213F;
-    --navy-2: #1E3160;
-    --gold: #C9A24A;
-    --gold-hi: #F1D27A;
-    --ink: #17203A;
-    --muted: #5B6478;
-    --paper: #FFFFFF;
-    --mist: #F3F4F8;
-    --line: #E1E4EC;
-    --display: 'Montserrat', 'Arial Black', Arial, sans-serif;
-    --body: 'Source Sans 3', 'Segoe UI', Helvetica, Arial, sans-serif;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  html, body { overflow-x: hidden; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.55 var(--body); }
-  a { color: inherit; }
-  img { max-width: 100%; display: block; }
-  .wrap { max-width: 1160px; margin: 0 auto; padding-inline: 20px; }
-  h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
-  :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
-
-  /* top bar */
-  .bar { background: var(--navy); color: #fff; }
-  .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
-  .logo { display: inline-flex; flex-direction: column; align-items: center; text-decoration: none; line-height: .92; font-family: var(--display); font-weight: 900; }
-  .logo .s { display: flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 1px; }
-  .logo .s::before, .logo .s::after { content: ""; width: 22px; height: 2px; background: var(--gold); }
-  .logo .m { font-size: 26px; }
-  .logo .g { font-size: 22px; color: var(--gold); }
-  .nav { display: flex; gap: 22px; font-weight: 600; flex-wrap: wrap; }
-  .nav a { text-decoration: none; opacity: .9; }
-  .nav a:hover { opacity: 1; color: var(--gold-hi); }
-
-  /* hero */
-  .hero { background: var(--navy); color: #fff; padding-block: 36px 64px; position: relative; overflow: hidden; }
-  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 44px; align-items: center; }
-  .hero > * { position: relative; }
-  .eyebrow { font-family: var(--display); font-weight: 800; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
-  .hero h1 { font-size: clamp(38px, 5.4vw, 64px); font-weight: 900; font-style: italic; line-height: .98; text-transform: uppercase; margin-top: 10px; }
-  .hero h1 em { font-style: italic; background: linear-gradient(180deg, var(--gold-hi), var(--gold) 55%, #9C7A2C); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .hero p.lede { font-size: 19px; opacity: .88; max-width: 34em; margin: 18px 0 24px; }
-  .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn { display: inline-flex; align-items: center; gap: 10px; font: 800 15px var(--display); padding: 13px 20px; border-radius: 6px; text-decoration: none; border: 2px solid transparent; cursor: pointer; }
-  .btn svg { width: 20px; height: 20px; flex: none; }
-  .btn-gold { background: var(--gold); color: var(--navy); }
-  .btn-gold:hover { background: var(--gold-hi); }
-  .btn-ghost { border-color: rgba(255,255,255,.4); color: #fff; background: transparent; }
-  .btn-ghost:hover { border-color: #fff; }
-  .latest-label { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 10px; }
-  .latest-label .eyebrow { color: var(--gold-hi); }
-  .latest-title { font-size: 20px; font-weight: 800; margin-top: 12px; }
-  .latest-meta { opacity: .75; font-size: 15px; margin-top: 4px; }
-  .brush { position: absolute; left: -2%; right: -2%; bottom: -1px; height: 34px; background: var(--paper);
-           clip-path: polygon(0 60%, 4% 40%, 9% 62%, 15% 35%, 22% 55%, 30% 30%, 38% 58%, 46% 38%, 55% 60%, 63% 34%, 71% 57%, 79% 36%, 86% 62%, 93% 40%, 100% 58%, 100% 100%, 0 100%); }
-  .brush.gold { bottom: 10px; height: 30px; background: var(--gold); opacity: .9; }
-
-  /* video frame */
-  .player { position: relative; aspect-ratio: 16 / 9; width: 100%; max-width: 100%; border-radius: 8px; overflow: hidden; background: #000; box-shadow: 0 18px 50px rgba(0,0,0,.35); }
-  .player img, .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
-  .player button.play { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: transparent; cursor: pointer; }
-  .player button.play span { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 78px; height: 78px; border-radius: 50%; background: var(--gold); display: grid; place-items: center; box-shadow: 0 6px 20px rgba(0,0,0,.35); transition: transform .15s; }
-  .player button.play:hover span { transform: translate(-50%, -50%) scale(1.07); }
-  .player button.play svg { width: 30px; height: 30px; margin-left: 5px; fill: var(--navy); }
-
-  /* library */
-  section { padding-block: 56px; }
-  .sec-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; }
-  .sec-head h2 { font-size: clamp(28px, 3.4vw, 40px); font-weight: 900; text-transform: uppercase; color: var(--navy); }
-  .sec-head p { margin: 6px 0 0; color: var(--muted); }
-  .tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-  .search { position: relative; }
-  .search input { font: 16px var(--body); padding: 11px 14px 11px 40px; width: min(320px, 82vw); border: 2px solid var(--line); border-radius: 6px; color: var(--ink); background: var(--paper); }
-  .search input:focus { border-color: var(--gold); outline: none; }
-  .search svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; fill: var(--muted); }
-  .chip { font: 700 14px var(--display); padding: 10px 14px; border-radius: 999px; border: 2px solid var(--line); background: var(--paper); color: var(--navy); cursor: pointer; }
-  .chip[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
-  .count { color: var(--muted); font-size: 15px; margin-bottom: 14px; font-variant-numeric: tabular-nums; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 26px; }
-  .card { display: flex; flex-direction: column; gap: 10px; min-width: 0; text-align: left; background: none; border: 0; padding: 0; color: inherit; font: inherit; cursor: pointer; }
-  .thumb { position: relative; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: var(--mist); }
-  .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s; }
-  .card:hover .thumb img { transform: scale(1.03); }
-  .badge { position: absolute; left: 10px; top: 10px; font: 900 13px var(--display); background: var(--navy); color: #fff; border-left: 4px solid var(--gold); padding: 5px 9px; letter-spacing: .5px; }
-  .dur { position: absolute; right: 8px; bottom: 8px; font: 700 12px var(--display); background: rgba(10,16,32,.85); color: #fff; padding: 3px 7px; border-radius: 4px; font-variant-numeric: tabular-nums; }
-  .card h3 { font-size: 18px; font-weight: 800; line-height: 1.25; color: var(--navy); }
-  .card .meta { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
-  .card p { margin: 0; font-size: 15.5px; color: #39425A; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .empty { padding: 40px 0; color: var(--muted); }
-
-  /* hosts */
-  .hosts { background: var(--mist); }
-  .host-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
-  .host { background: var(--paper); border-radius: 8px; padding: 26px; border-top: 5px solid var(--gold); }
-  .host h3 { color: var(--navy); font-size: 22px; font-weight: 900; }
-  .host .role { font: 700 13px var(--display); letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin: 4px 0 10px; }
-  .host p { margin: 0 0 12px; color: #39425A; }
-  .host a { font-weight: 600; color: var(--navy); }
-  .host-photo { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; object-position: 50% 18%; border: 4px solid var(--gold); margin-bottom: 14px; background: var(--mist); }
-  .host-links { display: flex; gap: 18px; flex-wrap: wrap; }
-
-  /* guest application */
-  .guest .sec-head p { max-width: 40em; }
-  .btn-navy { background: var(--navy); color: #fff; }
-  .btn-navy:hover { background: var(--navy-2); }
-  .form-frame { max-width: 760px; margin: 0 auto; border: 2px solid var(--line); border-top: 5px solid var(--gold); border-radius: 8px; overflow: hidden; background: var(--paper); }
-  .form-frame iframe { display: block; width: 100%; height: 2600px; border: 0; }
-
-  /* sign-off */
-  footer { background: var(--navy); color: #fff; text-align: center; padding-block: 48px 40px; }
-  .signoff { font: 900 italic clamp(22px, 3vw, 32px)/1.15 var(--display); text-transform: uppercase; max-width: 22em; margin: 0 auto 22px; }
-  .signoff em { color: var(--gold); font-style: italic; }
-  footer .ctas { justify-content: center; }
-  footer small { display: block; margin-top: 26px; opacity: .6; }
-
-  /* modal player */
-  dialog { border: 0; padding: 0; width: min(980px, 94vw); max-width: 94vw; background: var(--navy); color: #fff; border-radius: 10px; }
-  dialog::backdrop { background: rgba(8,12,24,.82); }
-  .dlg-body { padding: 18px 20px 22px; }
-  .dlg-top { display: flex; justify-content: space-between; align-items: start; gap: 14px; }
-  .dlg-top h3 { font-size: 20px; font-weight: 800; }
-  .close { background: none; border: 0; color: #fff; font-size: 30px; line-height: 1; cursor: pointer; padding: 0 4px; }
-  .dlg-body p { opacity: .85; margin: 10px 0 16px; }
-
-  @media (max-width: 860px) {
-    .hero .wrap { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-    .nav { gap: 16px; font-size: 15px; }
-    .host-row { grid-template-columns: 1fr; }
-  }
-  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="home">
 
 <header class="bar">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="The More Smarter Show home">
+    <a class="logo" href="index.html" aria-label="The More Smarter Show home">
       <span class="s">THE</span><span class="m">MORE</span><span class="g">SMARTER</span><span class="s">SHOW</span>
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="#episodes">Episodes</a>
-      <a href="#hosts">Hosts</a>
-      <a href="#guest">Be a Guest</a>
+      <a href="episodes.html" data-page="episodes">Episodes</a>
+      <a href="hosts.html" data-page="hosts">Hosts</a>
+      <a href="guest.html" data-page="guest">Be a Guest</a>
+      <a href="ad-partners.html" data-page="ads">Ad Partners</a>
       <a href="https://www.youtube.com/@TheMoreSmarterShow" target="_blank" rel="noopener">YouTube</a>
       <a href="https://open.spotify.com/show/1ER3J5veUX59H5ya2H1MA5" target="_blank" rel="noopener">Spotify</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<main>
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap">
       <div>
         <div class="eyebrow">A podcast for the self-employed</div>
         <h1 id="hero-title">Work <em>more smarter</em>, not harder.</h1>
-        <p class="lede">Jake Handler and Dylan Onorevole sit down with business owners, investors and entrepreneurs to talk about the systems, deals and decisions that let you build a life on your own terms. New episodes every Thursday.</p>
+        <p class="lede">Dylan Onorevole and Jake Handler sit down with business owners, investors and entrepreneurs to talk about the systems, deals and decisions that let you build a life on your own terms. New episodes every Thursday.</p>
         <div class="ctas">
-          <a class="btn btn-gold" href="https://www.youtube.com/@TheMoreSmarterShow?sub_confirmation=1" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.1V8.9L15.5 12Z"/></svg>
-            Subscribe on YouTube</a>
-          <a class="btn btn-ghost" href="https://open.spotify.com/show/1ER3J5veUX59H5ya2H1MA5" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 1 0 0 23 11.5 11.5 0 0 0 0-23Zm5.3 16.6a.7.7 0 0 1-1 .2c-2.7-1.6-6-2-10-1.1a.7.7 0 0 1-.3-1.4c4.3-1 8-.6 11 1.3.4.2.5.6.3 1Zm1.4-3.1a.9.9 0 0 1-1.2.3c-3-1.9-7.7-2.4-11.3-1.3a.9.9 0 1 1-.5-1.7c4.1-1.2 9.2-.6 12.7 1.5.4.3.5.8.3 1.2Zm.1-3.2C15.2 8.6 9.3 8.4 5.9 9.4a1 1 0 1 1-.6-2c3.9-1.2 10.4-.9 14.5 1.5a1 1 0 0 1-1 1.8Z"/></svg>
-            Listen on Spotify</a>
+          <a class="btn btn-gold" href="https://www.youtube.com/@TheMoreSmarterShow?sub_confirmation=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.1V8.9L15.5 12Z"/></svg> Subscribe on YouTube</a>
+          <a class="btn btn-ghost" href="https://open.spotify.com/show/1ER3J5veUX59H5ya2H1MA5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 1 0 0 23 11.5 11.5 0 0 0 0-23Zm5.3 16.6a.7.7 0 0 1-1 .2c-2.7-1.6-6-2-10-1.1a.7.7 0 0 1-.3-1.4c4.3-1 8-.6 11 1.3.4.2.5.6.3 1Zm1.4-3.1a.9.9 0 0 1-1.2.3c-3-1.9-7.7-2.4-11.3-1.3a.9.9 0 1 1-.5-1.7c4.1-1.2 9.2-.6 12.7 1.5.4.3.5.8.3 1.2Zm.1-3.2C15.2 8.6 9.3 8.4 5.9 9.4a1 1 0 1 1-.6-2c3.9-1.2 10.4-.9 14.5 1.5a1 1 0 0 1-1 1.8Z"/></svg> Listen on Spotify</a>
         </div>
       </div>
       <div>
@@ -192,64 +56,20 @@
     <div class="brush" aria-hidden="true"></div>
   </section>
 
-  <section id="episodes" aria-labelledby="eps-title">
+  <section aria-labelledby="recent-title">
     <div class="wrap">
       <div class="sec-head">
-        <div>
-          <h2 id="eps-title">Every Episode</h2>
-          <p>Search by guest, topic or business. Click any episode to watch it here.</p>
-        </div>
-        <div class="tools">
-          <label class="search" for="q">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg>
-            <span hidden>Search episodes</span>
-            <input id="q" type="search" placeholder="Try: house hacking, Bitcoin, AI" autocomplete="off">
-          </label>
-          <button class="chip" id="f-all" aria-pressed="true" data-f="all">All</button>
-          <button class="chip" id="f-guest" aria-pressed="false" data-f="guest">Guest interviews</button>
-          <button class="chip" id="f-duo" aria-pressed="false" data-f="duo">Jake &amp; Dylan</button>
-        </div>
+        <div><h2 id="recent-title">Recent Episodes</h2><p>Click any episode to watch it here.</p></div>
+        <a class="btn btn-navy" href="episodes.html">See all episodes</a>
       </div>
-      <div class="count" id="count" aria-live="polite"></div>
-      <div class="grid" id="grid"></div>
-      <div class="empty" id="empty" hidden>No episodes match that search. Try a guest's first name or a broader topic.</div>
+      <div class="grid" id="recent-grid"></div>
     </div>
   </section>
 
-  <section class="hosts" id="hosts" aria-labelledby="hosts-title">
+  <section class="cta-band">
     <div class="wrap">
-      <div class="sec-head"><h2 id="hosts-title">Your Hosts</h2></div>
-      <div class="host-row">
-        <article class="host">
-          <img class="host-photo" src="https://dorealestatenj.com/wp-content/uploads/2025/11/dylan-polished-1.png" alt="Dylan Onorevole" loading="lazy">
-          <h3>Dylan Onorevole</h3>
-          <div class="role">NJ realtor &amp; investor</div>
-          <p>Dylan bought his first multifamily as a house hack in his early twenties and brings the perspective of someone building a real estate business and portfolio in real time.</p>
-          <div class="host-links"><a href="https://dorealestatenj.com/" target="_blank" rel="noopener">dorealestatenj.com</a><a href="https://www.instagram.com/dylanonorevolenj/" target="_blank" rel="noopener">@DylanOnorevoleNJ</a></div>
-        </article>
-        <article class="host">
-          <img class="host-photo" src="https://lh3.googleusercontent.com/d/12MRkoNF2zcbUez5-ALwpOlUvxcgzIgW7=w400" alt="Jake Handler" loading="lazy">
-          <h3>Jake Handler</h3>
-          <div class="role">NJ real estate investor &amp; agent</div>
-          <p>Former teacher turned full-time realtor, investor and owner of Vessel Property Management. Jake started with a house hack and builds his businesses around lifestyle first: slow, steady and on his own terms.</p>
-          <div class="host-links"><a href="https://www.jakehandler.com/" target="_blank" rel="noopener">JakeHandler.com</a><a href="https://www.instagram.com/jakehandlernj/" target="_blank" rel="noopener">@JakeHandlerNJ</a></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="guest" id="guest" aria-labelledby="guest-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <h2 id="guest-title">Be a Guest</h2>
-          <p>Own a business and have systems worth sharing? Apply below. This show isn't a promo spot: we talk about how you run the business day to day and how you work more smarter, whatever your field.</p>
-        </div>
-        <a class="btn btn-navy" href="https://forms.gle/F5zRLPv8b2uFYSf89" target="_blank" rel="noopener">Open the form in a new tab</a>
-      </div>
-      <div class="form-frame">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScZBz1goG4D8GXHIRfhNni5WtvDwG36Y2elooL5GWgNf7DD-A/viewform?embedded=true" title="The More Smarter Show guest application" loading="lazy">Loading the application form…</iframe>
-      </div>
+      <div><h2>Own a business? Be a guest.</h2><p>We talk about how you run it day to day and how you work more smarter.</p></div>
+      <div class="ctas"><a class="btn btn-gold" href="guest.html">Apply to be a guest</a><a class="btn btn-navy" href="ad-partners.html">Advertise with us</a></div>
     </div>
   </section>
 </main>
@@ -278,100 +98,6 @@
 </dialog>
 
 <script src="episodes.js"></script>
-<script>
-(function () {
-  var EPS = window.EPISODES || [];
-  var PLAY = '<span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>';
-  var fmtDate = function (d) { return new Date(d + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); };
-  var thumb = function (id, hi) { return 'https://i.ytimg.com/vi/' + id + '/' + (hi ? 'maxresdefault' : 'hqdefault') + '.jpg'; };
-  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
-  var isGuest = function (e) { return /\(with /i.test(e.t); };
-
-  // click-to-play: only load YouTube when someone actually presses play
-  function mountPlayer(el, ep, hi, autoplay) {
-    if (autoplay) {
-      el.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + ep.id + '?autoplay=1&rel=0" title="' + esc(ep.t) + '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
-      return;
-    }
-    el.innerHTML = '<img src="' + thumb(ep.id, hi) + '" alt="' + esc(ep.t) + ' thumbnail" loading="lazy" onerror="this.src=\'' + thumb(ep.id, false) + '\'">' +
-      '<button class="play" aria-label="Play episode ' + ep.n + ': ' + esc(ep.t) + '">' + PLAY + '</button>';
-    el.querySelector('button').addEventListener('click', function () { mountPlayer(el, ep, hi, true); });
-  }
-
-  // latest episode
-  var latest = EPS[0];
-  if (latest) {
-    mountPlayer(document.getElementById('latest-player'), latest, true, false);
-    document.getElementById('latest-num').textContent = 'Episode ' + latest.n;
-    document.getElementById('latest-title').textContent = latest.t;
-    document.getElementById('latest-meta').textContent = fmtDate(latest.d) + ' · ' + latest.l;
-  }
-
-  // library
-  var grid = document.getElementById('grid'), q = document.getElementById('q'), count = document.getElementById('count'), empty = document.getElementById('empty');
-  var filter = 'all';
-  function render() {
-    var term = q.value.trim().toLowerCase();
-    var list = EPS.filter(function (e) {
-      if (filter === 'guest' && !isGuest(e)) return false;
-      if (filter === 'duo' && isGuest(e)) return false;
-      if (!term) return true;
-      return (e.t + ' ' + e.s + ' episode ' + e.n).toLowerCase().indexOf(term) !== -1;
-    });
-    grid.innerHTML = list.map(function (e) {
-      return '<button class="card" id="ep-' + e.n + '" data-n="' + e.n + '">' +
-        '<div class="thumb"><img src="' + thumb(e.id) + '" alt="" loading="lazy"><span class="dur">' + e.l + '</span></div>' +
-        '<h3>' + esc(e.t) + '</h3><div class="meta">' + fmtDate(e.d) + '</div><p>' + esc(e.s) + '</p></button>';
-    }).join('');
-    count.textContent = list.length === EPS.length ? EPS.length + ' episodes' : list.length + ' of ' + EPS.length + ' episodes';
-    empty.hidden = list.length > 0;
-  }
-  q.addEventListener('input', render);
-  document.querySelectorAll('.chip').forEach(function (c) {
-    c.addEventListener('click', function () {
-      filter = c.dataset.f;
-      document.querySelectorAll('.chip').forEach(function (x) { x.setAttribute('aria-pressed', String(x === c)); });
-      render();
-    });
-  });
-  grid.addEventListener('click', function (ev) {
-    var card = ev.target.closest('.card'); if (!card) return;
-    openEp(+card.dataset.n);
-  });
-
-  // modal
-  var dlg = document.getElementById('dlg');
-  function openEp(n) {
-    var e = EPS.find(function (x) { return x.n === n; }); if (!e) return;
-    document.getElementById('dlg-title').textContent = 'Episode ' + e.n + ': ' + e.t;
-    document.getElementById('dlg-desc').textContent = e.s;
-    document.getElementById('dlg-yt').href = 'https://www.youtube.com/watch?v=' + e.id;
-    mountPlayer(document.getElementById('dlg-player'), e, true, true);
-    if (!dlg.open) dlg.showModal();
-    history.replaceState(null, '', '#ep-' + e.n);
-  }
-  function closeEp() { document.getElementById('dlg-player').innerHTML = ''; if (dlg.open) dlg.close(); history.replaceState(null, '', location.pathname); }
-  document.getElementById('dlg-close').addEventListener('click', closeEp);
-  dlg.addEventListener('click', function (ev) { if (ev.target === dlg) closeEp(); });
-  dlg.addEventListener('cancel', function (ev) { ev.preventDefault(); closeEp(); });
-
-  render();
-  document.getElementById('yr').textContent = new Date().getFullYear();
-  var m = location.hash.match(/^#ep-(\d+)$/); if (m) openEp(+m[1]);
-
-  // structured data for search engines
-  var ld = {
-    '@context': 'https://schema.org', '@type': 'PodcastSeries', name: 'The More Smarter Show',
-    description: 'A podcast for self-employed people and business owners about working smarter, not harder.',
-    url: location.origin + location.pathname, webFeed: 'https://open.spotify.com/show/1ER3J5veUX59H5ya2H1MA5',
-    author: [{ '@type': 'Person', name: 'Jake Handler' }, { '@type': 'Person', name: 'Dylan Onorevole' }],
-    hasPart: EPS.map(function (e) {
-      return { '@type': 'PodcastEpisode', episodeNumber: e.n, name: e.t, datePublished: e.d, description: e.s,
-        url: 'https://www.youtube.com/watch?v=' + e.id, thumbnailUrl: thumb(e.id, false) };
-    })
-  };
-  var s = document.createElement('script'); s.type = 'application/ld+json'; s.textContent = JSON.stringify(ld); document.head.appendChild(s);
-})();
-</script>
+<script src="app.js"></script>
 </body>
 </html>
