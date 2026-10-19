@@ -114,6 +114,8 @@
   .host .role { font: 700 13px var(--display); letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin: 4px 0 10px; }
   .host p { margin: 0 0 12px; color: #39425A; }
   .host a { font-weight: 600; color: var(--navy); }
+  .host-photo { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; object-position: 50% 18%; border: 4px solid var(--gold); margin-bottom: 14px; background: var(--mist); }
+  .host-links { display: flex; gap: 18px; flex-wrap: wrap; }
 
   /* guest application */
   .guest .sec-head p { max-width: 40em; }
@@ -219,16 +221,18 @@
       <div class="sec-head"><h2 id="hosts-title">Your Hosts</h2></div>
       <div class="host-row">
         <article class="host">
+          <img class="host-photo" src="https://dorealestatenj.com/wp-content/uploads/2025/11/dylan-polished-1.png" alt="Dylan Onorevole" loading="lazy">
           <h3>Dylan Onorevole</h3>
           <div class="role">NJ realtor &amp; investor</div>
           <p>Dylan bought his first multifamily as a house hack in his early twenties and brings the perspective of someone building a real estate business and portfolio in real time.</p>
-          <a href="https://www.instagram.com/dylanonorevolenj/" target="_blank" rel="noopener">@dylanonorevolenj</a>
+          <div class="host-links"><a href="https://dorealestatenj.com/" target="_blank" rel="noopener">dorealestatenj.com</a><a href="https://www.instagram.com/dylanonorevolenj/" target="_blank" rel="noopener">@DylanOnorevoleNJ</a></div>
         </article>
         <article class="host">
+          <img class="host-photo" src="https://lh3.googleusercontent.com/d/12MRkoNF2zcbUez5-ALwpOlUvxcgzIgW7=w400" alt="Jake Handler" loading="lazy">
           <h3>Jake Handler</h3>
           <div class="role">NJ real estate investor &amp; agent</div>
           <p>Former teacher turned full-time realtor, investor and owner of Vessel Property Management. Jake started with a house hack and builds his businesses around lifestyle first: slow, steady and on his own terms.</p>
-          <a href="https://www.instagram.com/jakehandlernj/" target="_blank" rel="noopener">@jakehandlernj</a>
+          <div class="host-links"><a href="https://www.jakehandler.com/" target="_blank" rel="noopener">JakeHandler.com</a><a href="https://www.instagram.com/jakehandlernj/" target="_blank" rel="noopener">@JakeHandlerNJ</a></div>
         </article>
       </div>
     </div>
