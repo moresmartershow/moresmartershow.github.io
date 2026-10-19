@@ -115,6 +115,13 @@
   .host p { margin: 0 0 12px; color: #39425A; }
   .host a { font-weight: 600; color: var(--navy); }
 
+  /* guest application */
+  .guest .sec-head p { max-width: 40em; }
+  .btn-navy { background: var(--navy); color: #fff; }
+  .btn-navy:hover { background: var(--navy-2); }
+  .form-frame { max-width: 760px; margin: 0 auto; border: 2px solid var(--line); border-top: 5px solid var(--gold); border-radius: 8px; overflow: hidden; background: var(--paper); }
+  .form-frame iframe { display: block; width: 100%; height: 2600px; border: 0; }
+
   /* sign-off */
   footer { background: var(--navy); color: #fff; text-align: center; padding-block: 48px 40px; }
   .signoff { font: 900 italic clamp(22px, 3vw, 32px)/1.15 var(--display); text-transform: uppercase; max-width: 22em; margin: 0 auto 22px; }
@@ -149,6 +156,7 @@
     <nav class="nav" aria-label="Main">
       <a href="#episodes">Episodes</a>
       <a href="#hosts">Hosts</a>
+      <a href="#guest">Be a Guest</a>
       <a href="https://www.youtube.com/@TheMoreSmarterShow" target="_blank" rel="noopener">YouTube</a>
       <a href="https://open.spotify.com/show/1ER3J5veUX59H5ya2H1MA5" target="_blank" rel="noopener">Spotify</a>
     </nav>
@@ -211,17 +219,32 @@
       <div class="sec-head"><h2 id="hosts-title">Your Hosts</h2></div>
       <div class="host-row">
         <article class="host">
-          <h3>Jake Handler</h3>
-          <div class="role">NJ real estate investor &amp; agent</div>
-          <p>Former high school teacher turned full-time realtor, investor and owner of Vessel Property Management. Jake started with a house hack and builds his businesses around lifestyle first: slow, steady and on his own terms.</p>
-          <a href="https://www.instagram.com/jakehandlernj/" target="_blank" rel="noopener">@jakehandlernj</a>
-        </article>
-        <article class="host">
           <h3>Dylan Onorevole</h3>
           <div class="role">NJ realtor &amp; investor</div>
           <p>Dylan bought his first multifamily as a house hack in his early twenties and brings the perspective of someone building a real estate business and portfolio in real time.</p>
           <a href="https://www.instagram.com/dylanonorevolenj/" target="_blank" rel="noopener">@dylanonorevolenj</a>
         </article>
+        <article class="host">
+          <h3>Jake Handler</h3>
+          <div class="role">NJ real estate investor &amp; agent</div>
+          <p>Former teacher turned full-time realtor, investor and owner of Vessel Property Management. Jake started with a house hack and builds his businesses around lifestyle first: slow, steady and on his own terms.</p>
+          <a href="https://www.instagram.com/jakehandlernj/" target="_blank" rel="noopener">@jakehandlernj</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="guest" id="guest" aria-labelledby="guest-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="guest-title">Be a Guest</h2>
+          <p>Own a business and have systems worth sharing? Apply below. This show isn't a promo spot: we talk about how you run the business day to day and how you work more smarter, whatever your field.</p>
+        </div>
+        <a class="btn btn-navy" href="https://forms.gle/F5zRLPv8b2uFYSf89" target="_blank" rel="noopener">Open the form in a new tab</a>
+      </div>
+      <div class="form-frame">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScZBz1goG4D8GXHIRfhNni5WtvDwG36Y2elooL5GWgNf7DD-A/viewform?embedded=true" title="The More Smarter Show guest application" loading="lazy">Loading the application form…</iframe>
       </div>
     </div>
   </section>
