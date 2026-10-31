@@ -1,6 +1,7 @@
 // The More Smarter Show: episode list. Newest first.
 // To add an episode: copy the first line, bump n, and paste the YouTube video id, title, date (YYYY-MM-DD), length and a 1-2 sentence summary.
 window.EPISODES = [
+{"n":72,"id":"vY-2jJENrE8","t":"We Are The AI For Commercial Real Estate! (with Jackson Reiter of Relm AI)","d":"2026-10-29","l":"49:14","s":"Jackson Reiter, co-founder of Relm AI, explains how his team is using AI to speed up commercial real estate analysis, going from college roommates to co-founders, raising VC money, and whether Bitcoin and tokenization are the future of real estate."},
 {"n":71,"id":"jgeo5w5VkRA","t":"If You Win Today, What Happens Tomorrow?","d":"2026-10-22","l":"40:02","s":"Dylan and Jake ask what happens after you win: why becoming a top producer isn't the goal, why hitting singles beats swinging for home runs in real estate, and the lonely side of success nobody talks about."},
 {"n":70,"id":"u6ELuo0IuNA","t":"Let's Talk About Bitcoin (with Rob Glasser)","d":"2026-10-15","l":"49:10","s":"Jake and Dylan welcome mortgage lender Rob Glasser back to discuss Bitcoin, real estate investing, inflation, and the future of money, and the benefits of owning tangible assets."},
 {"n":69,"id":"XJDZhEPWDGI","t":"Playing The Long Game","d":"2026-10-08","l":"41:22","s":"Jake and Dylan dive into the realities of real estate investing, building long-term wealth, and why short-term financial stress can sometimes be part of the process. Assumable loans, house hacking, renovations and more."},
