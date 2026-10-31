@@ -43,6 +43,9 @@
   .hero h1 em { font-style: italic; background: linear-gradient(180deg, var(--gold-hi), var(--gold) 55%, #9C7A2C); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .hero p.lede { font-size: 19px; opacity: .88; max-width: 34em; margin: 18px 0 24px; }
   .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .flex-stat { margin-top: 22px; font-size: 17px; opacity: .92; }
+  .flex-stat strong { font-size: 30px; font-weight: 900; font-style: italic; color: var(--gold-hi); margin-right: 6px; vertical-align: -3px; }
+  .flex-stat span { display: block; font-size: 13px; opacity: .65; margin-top: 2px; }
   .btn { display: inline-flex; align-items: center; gap: 10px; font: 800 15px var(--display); padding: 13px 20px; border-radius: 6px; text-decoration: none; border: 2px solid transparent; cursor: pointer; }
   .btn svg { width: 20px; height: 20px; flex: none; }
   .btn-gold { background: var(--gold); color: var(--navy); }
