@@ -125,6 +125,10 @@
   var form = $('apply');
   if (form) {
     var sent = false;
+    // human check: a small sum, a hidden field only bots fill in, and a minimum time on the page
+    var loaded = Date.now();
+    var hx = 2 + Math.floor(Math.random() * 8), hy = 1 + Math.floor(Math.random() * 9);
+    $('human-x').textContent = hx; $('human-y').textContent = hy;
     // "Other" text box checks its option when typed in
     form.querySelectorAll('.other-text').forEach(function (t) {
       t.addEventListener('input', function () { var box = t.closest('.opt').querySelector('input[type=checkbox],input[type=radio]'); if (t.value) box.checked = true; });
@@ -147,12 +151,18 @@
         q.classList.toggle('invalid', !ok);
         if (!ok && !bad) bad = q;
       });
+      var human = $('human'), answer = $('human-a').value.trim();
+      var isHuman = answer === String(hx + hy) && !$('hp').value && Date.now() - loaded > 3000;
+      human.classList.toggle('invalid', !isHuman);
+      if (!isHuman && !bad) bad = human;
       if (bad) { ev.preventDefault(); bad.scrollIntoView({ behavior: 'smooth', block: 'center' }); var f = bad.querySelector('input,textarea'); if (f) f.focus({ preventScroll: true }); return; }
       // "Other" text boxes only send when their option is checked
       form.querySelectorAll('.other-text').forEach(function (t) {
         var box = t.closest('.opt').querySelector('input[type=checkbox],input[type=radio]');
         t.disabled = !box.checked;
       });
+      $('hp').disabled = true;
+      form.action = atob(form.dataset.to).split('').reverse().join('');
       $('apply-btn').disabled = true; $('apply-btn').textContent = 'Sending…';
       sent = true;
     });

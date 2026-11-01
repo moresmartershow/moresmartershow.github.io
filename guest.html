@@ -46,7 +46,7 @@
 
   <section aria-label="Guest application form">
     <div class="wrap">
-      <form class="apply" id="apply" action="https://docs.google.com/forms/d/e/1FAIpQLScZBz1goG4D8GXHIRfhNni5WtvDwG36Y2elooL5GWgNf7DD-A/formResponse" method="POST" target="apply-target" novalidate>
+      <form class="apply" id="apply" data-to="ZXNub3BzZVJtcm9mL0EtREQ3Zk5nV0c1TG9vbGUyWTYzR3dEdnRXNWluTmhmUklIWEc4RDRHb2cxekJaY1NMUXBJQUYxL2UvZC9zbXJvZi9tb2MuZWxnb29nLnNjb2QvLzpzcHR0aA==" method="POST" target="apply-target" novalidate>
         <div class="q" data-required="true">
           <label for="fg0">Email<span class="req" aria-hidden="true">*</span></label>
           <input id="fg0" type="email" name="emailAddress" autocomplete="email">
@@ -147,6 +147,12 @@
           <div class="opts cols" id="slots" data-name="entry.761049817" data-src="https://script.google.com/macros/s/AKfycby5i5xY4Qh3hJkHKq7tg-cSjPk-7PlXbDSgN9cyTlIO61-KqtQJQ7F26nDOtwiZMgcYUQ/exec"><span class="form-note">Loading available dates…</span></div>
           <span class="err">This question is required.</span>
         </fieldset>
+        <div class="q human" id="human">
+          <label for="human-a">Quick check that you're human: what is <span id="human-x">?</span> plus <span id="human-y">?</span>?<span class="req" aria-hidden="true">*</span></label>
+          <input id="human-a" type="text" inputmode="numeric" autocomplete="off">
+          <span class="err">That's not quite right. Try again.</span>
+          <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="website" id="hp" tabindex="-1" autocomplete="off"></label>
+        </div>
         <div class="submit-row">
           <button class="btn btn-navy" id="apply-btn" type="submit">Submit application</button>
           <span class="form-note">Takes about 5 minutes.</span>

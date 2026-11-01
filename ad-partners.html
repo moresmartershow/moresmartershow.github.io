@@ -46,7 +46,7 @@
 
   <section aria-label="Ad partner inquiry form">
     <div class="wrap">
-      <form class="apply" id="apply" action="https://docs.google.com/forms/d/e/1FAIpQLSeWFOGpE0k-5HQZKSLXuup3xDQSjoE_9qjlO7zp227PlnTa7w/formResponse" method="POST" target="apply-target" novalidate>
+      <form class="apply" id="apply" data-to="ZXNub3BzZVJtcm9mL3c3YVRubFA3MjJwejdPbGpxOV9Fb2pTUUR4M3B1dVhMU0taUUg1LWswRXBHT0ZXZVNMUXBJQUYxL2UvZC9zbXJvZi9tb2MuZWxnb29nLnNjb2QvLzpzcHR0aA==" method="POST" target="apply-target" novalidate>
         <div class="q" data-required="true">
           <label for="fa0">Company / brand name<span class="req" aria-hidden="true">*</span></label>
           <input id="fa0" type="text" name="entry.63071519">
@@ -110,6 +110,12 @@
           <label for="fa9">Anything else we should know?</label>
           <textarea id="fa9" name="entry.1256333836" rows="4"></textarea>
           
+        </div>
+        <div class="q human" id="human">
+          <label for="human-a">Quick check that you're human: what is <span id="human-x">?</span> plus <span id="human-y">?</span>?<span class="req" aria-hidden="true">*</span></label>
+          <input id="human-a" type="text" inputmode="numeric" autocomplete="off">
+          <span class="err">That's not quite right. Try again.</span>
+          <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="website" id="hp" tabindex="-1" autocomplete="off"></label>
         </div>
         <div class="submit-row">
           <button class="btn btn-navy" id="apply-btn" type="submit">Send inquiry</button>

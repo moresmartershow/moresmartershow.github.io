@@ -165,6 +165,8 @@
   .q .err { color: #B3261E; font-size: 14px; display: none; }
   .q.invalid { border-color: #B3261E; }
   .q.invalid .err { display: block; }
+  .q.human input[type=text] { max-width: 160px; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
   .apply .submit-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   .apply .btn-navy { font-size: 16px; padding: 15px 26px; border: 0; }
   .apply .btn-navy[disabled] { opacity: .6; cursor: wait; }
