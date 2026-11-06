@@ -96,7 +96,7 @@
     // structured data for search engines
     var ld = {
       '@context': 'https://schema.org', '@type': 'PodcastSeries', name: 'The More Smarter Show',
-      description: 'A podcast for self-employed people and business owners about working smarter, not harder.',
+      description: 'A podcast for aspiring entrepreneurs and business owners about working smarter, not harder.',
       url: location.origin + '/', webFeed: 'https://open.spotify.com/show/1ER3J5veUX59H5ya2H1MA5',
       author: [{ '@type': 'Person', name: 'Dylan Onorevole' }, { '@type': 'Person', name: 'Jake Handler' }],
       hasPart: EPS.map(function (e) {
