@@ -111,12 +111,34 @@
   var slots = $('slots');
   if (slots) {
     var CANT = 'I want to be on the show but I absolutely cannot make any of these times work!';
+    // slots have no year: a month/day already past means next year
+    var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var SLOT = /([A-Z][a-z]+) (\d{1,2}) @/;
+    var dateOf = function (l) {
+      var m = SLOT.exec(l), mi = m ? MONTHS.indexOf(m[1]) : -1, now = new Date();
+      if (mi < 0) return null;
+      var d = new Date(now.getFullYear(), mi, +m[2]);
+      if (d < new Date(now.getFullYear(), now.getMonth(), now.getDate())) d.setFullYear(d.getFullYear() + 1);
+      return d;
+    };
+    // the label shows the year so far-out dates don't look like leftovers from last year; the value stays the form's option
     var draw = function (list) {
       slots.innerHTML = list.map(function (l) {
-        return '<label class="opt"><input type="checkbox" name="' + slots.dataset.name + '" value="' + esc(l) + '"> ' + esc(l) + '</label>';
+        var d = dateOf(l), shown = d ? l.replace(SLOT, function (s, mo, dy) { return mo + ' ' + dy + ', ' + d.getFullYear() + ' @'; }) : l;
+        return '<label class="opt"><input type="checkbox" name="' + slots.dataset.name + '" value="' + esc(l) + '"> ' + esc(shown) + '</label>';
       }).join('');
     };
-    var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; var lead = function (list) { var now = new Date(), first = null; list.forEach(function (l) { var m = /([A-Z][a-z]+) (\d{1,2}) @/.exec(l), mi = m ? MONTHS.indexOf(m[1]) : -1; if (mi < 0) return; var d = new Date(now.getFullYear(), mi, +m[2]); if (d < new Date(now.getFullYear(), now.getMonth(), now.getDate())) d.setFullYear(d.getFullYear() + 1); if (!first || d < first) first = d; }); var leg = slots.closest('fieldset').querySelector('legend'), t = leg && leg.firstChild; if (!first || !t || t.nodeType !== 3) return; var n = Math.floor((first - now) / (30.44 * 864e5)); t.nodeValue = t.nodeValue.replace(/^We are currently booking [^.]*\. /, n >= 1 ? 'We are currently booking ' + n + '+ month' + (n > 1 ? 's' : '') + ' out. ' : ''); }; fetch(slots.dataset.src).then(function (r) { return r.json(); })
+    // "booking N+ months out" follows where the calendar really opens up: a lone early opening
+    // (nothing else within 3 weeks of it) is skipped so one cancellation doesn't change the message
+    var lead = function (list) {
+      var now = new Date(), ds = list.map(dateOf).filter(Boolean).sort(function (a, b) { return a - b; }), first = ds[0];
+      for (var i = 0; i < ds.length - 1; i++) if (ds[i + 1] - ds[i] <= 21 * 864e5) { first = ds[i]; break; }
+      var leg = slots.closest('fieldset').querySelector('legend'), t = leg && leg.firstChild;
+      if (!first || !t || t.nodeType !== 3) return;
+      var n = Math.floor((first - now) / (30.44 * 864e5));
+      t.nodeValue = t.nodeValue.replace(/^We are currently booking [^.]*\. /, n >= 1 ? 'We are currently booking ' + n + '+ month' + (n > 1 ? 's' : '') + ' out, which is normal for us. ' : '');
+    };
+    fetch(slots.dataset.src).then(function (r) { return r.json(); })
       .then(function (j) { var l = j.slots && j.slots.length ? j.slots : [CANT]; draw(l); lead(l); })
       .catch(function () { draw([CANT]); });
   }
