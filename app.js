@@ -116,8 +116,8 @@
         return '<label class="opt"><input type="checkbox" name="' + slots.dataset.name + '" value="' + esc(l) + '"> ' + esc(l) + '</label>';
       }).join('');
     };
-    fetch(slots.dataset.src).then(function (r) { return r.json(); })
-      .then(function (j) { draw(j.slots && j.slots.length ? j.slots : [CANT]); })
+    var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; var lead = function (list) { var now = new Date(), first = null; list.forEach(function (l) { var m = /([A-Z][a-z]+) (\d{1,2}) @/.exec(l), mi = m ? MONTHS.indexOf(m[1]) : -1; if (mi < 0) return; var d = new Date(now.getFullYear(), mi, +m[2]); if (d < new Date(now.getFullYear(), now.getMonth(), now.getDate())) d.setFullYear(d.getFullYear() + 1); if (!first || d < first) first = d; }); var leg = slots.closest('fieldset').querySelector('legend'), t = leg && leg.firstChild; if (!first || !t || t.nodeType !== 3) return; var n = Math.floor((first - now) / (30.44 * 864e5)); t.nodeValue = t.nodeValue.replace(/^We are currently booking [^.]*\. /, n >= 1 ? 'We are currently booking ' + n + '+ month' + (n > 1 ? 's' : '') + ' out. ' : ''); }; fetch(slots.dataset.src).then(function (r) { return r.json(); })
+      .then(function (j) { var l = j.slots && j.slots.length ? j.slots : [CANT]; draw(l); lead(l); })
       .catch(function () { draw([CANT]); });
   }
 
